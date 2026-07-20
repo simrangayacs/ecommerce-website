@@ -47,17 +47,17 @@ function Home() {
         ))}
       </div>
 
-      {loading ? (
-        <p>Loading products...</p>
-      ) : products.length === 0 ? (
-        <p>Koi product nahi mila</p>
-      ) : (
-        <>
-          <div className="product-grid">
-            {products.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
-          </div>
+       {loading ? (
+  <p>Loading products...</p>
+) : !products || products.length === 0 ? (
+  <p>Koi product nahi mila</p>
+) : (
+  <>
+    <div className="product-grid">
+      {products?.map((product) => (
+        <ProductCard key={product._id} product={product} />
+      ))}
+    </div>
 
           <div className="pagination">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
