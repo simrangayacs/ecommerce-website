@@ -1,4 +1,6 @@
-  const api = axios.create({
+
+import axios from 'axios';
+const api = axios.create({
   baseURL: process.env. https//ecommerce-website-9h1j.onrender.com || "http://localhost:5000/api",
 });
 
