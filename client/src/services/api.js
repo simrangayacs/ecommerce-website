@@ -1,7 +1,7 @@
+ import axios from 'axios';
 
-import axios from 'axios';
 const api = axios.create({
-  baseURL: process.env. https//ecommerce-website-9h1j.onrender.com || "http://localhost:5000/api",
+  baseURL: process.env.REACT_APP_API_URL || 'https://ecommerce-website-9h1j.onrender.com/api'
 });
 
 // har request ke saath agar user login hai to token bhej do
