@@ -1,10 +1,9 @@
  import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://ecommerce-website-9h1j.onrender.com/api'
+  baseURL: 'https://ecommerce-website-9h1j.onrender.com/api' // <-- Yahan aakhiri me /api zaroor lagayein
 });
 
-// har request ke saath agar user login hai to token bhej do
 api.interceptors.request.use((config) => {
   const user = localStorage.getItem("user");
   if (user) {

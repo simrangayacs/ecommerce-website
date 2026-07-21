@@ -13,7 +13,7 @@ function Home() {
   const category = searchParams.get("category") || "";
   const page = searchParams.get("page") || 1;
 
-  const categories = ["Electronics", "Clothing", "Books", "Home", "Sports"];
+  const categories = ["Electronics", "Clothing", "Books", "Home", "Sports", "Stationery"];
 
   useEffect(() => {
     async function fetchProducts() {
